@@ -1,8 +1,10 @@
+(function() {
+  var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
   window.SearchBox = (function() {
 
     function SearchBox(input) {
-      this.extendJqueryContains();
+      this.displayLinks = __bind(this.displayLinks, this);      this.extendJqueryContains();
       this.input = $(input);
       this.allLinks = $('.links li a');
       this.updateSearchString();
@@ -38,3 +40,5 @@
     return SearchBox;
 
   })();
+
+}).call(this);

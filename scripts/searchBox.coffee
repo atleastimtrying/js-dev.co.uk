@@ -12,7 +12,7 @@ class window.SearchBox
   updateSearchString: ->
     @searchString = @input.val()
 
-  displayLinks: ->
+  displayLinks: =>
     @updateSearchString()
     if @searchString is ''
       @allLinks.show()
