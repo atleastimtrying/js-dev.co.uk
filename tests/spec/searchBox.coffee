@@ -3,7 +3,7 @@ describe "the searchbox", ->
     window.searchBox = new SearchBox "#searchBox"
   
   it "exists", ->
-    expect(window.searchBox).toEqual new SearchBox "#searchBox"
+    expect(window.searchBox).toBeDefined()
 
   it "has an input element", ->
     expect(window.searchBox.input).toBeDefined()

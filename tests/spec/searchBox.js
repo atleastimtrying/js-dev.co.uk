@@ -4,7 +4,7 @@
       return window.searchBox = new SearchBox("#searchBox");
     });
     it("exists", function() {
-      return expect(window.searchBox).toEqual(new SearchBox("#searchBox"));
+      return expect(window.searchBox).toBeDefined();
     });
     it("has an input element", function() {
       return expect(window.searchBox.input).toBeDefined();
