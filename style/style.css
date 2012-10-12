@@ -13,11 +13,26 @@ body{
 header{
   margin-bottom:16px;
   padding:16px;
-  background:#ccc;}
+  background:#ccc;
+}
+header h1,
+header h2{
+  margin-bottom: 10px;
+}
+
+header input{
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 3px;
+  border: none;
+  width: 400px;
+}
 
 article{
   margin-bottom: 16px;
   padding:16px;
+  min-width:220px;
+  margin: 0 auto;
 }
 article ul{}
 article ul li{
@@ -33,7 +48,8 @@ article ul li a{
   width:180px;
   min-height:72px;
   font-size:16px;
-  margin-bottom:16px;
+  vertical-align: top;
+  margin: 0 -8px 16px 16px;
 }
 footer{
   padding: 14px;
