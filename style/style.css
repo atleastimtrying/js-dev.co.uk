@@ -39,6 +39,21 @@ header input:focus{
   background-color:orange;
   color:black;
 }
+nav{
+  margin:10px 0;
+}
+header nav a{
+  text-decoration:none;
+  padding:10px;
+  background:orange;
+  color:#333;
+  border-radius:3px;
+  display:inline-block;
+}
+header nav a:hover{
+  background:#333;
+  color:white;
+}
 
 article{
   margin-bottom: 16px;
@@ -68,18 +83,25 @@ article ul li a{
   -o-transition:background-color 0.5s ease-in;
   transition:background-color 0.5s ease-in;
 }
+
 article ul li a:hover{
   background-color:orange;
 }
+
 footer{
   padding: 14px;
   background:#333;
   color:#fff;
 }
+
 footer a{
   color:inherit;
   text-decoration:none;
   font-weight:bold;
+}
+
+.hidden{
+  display:none;
 }
 @media all and (max-width: 500px){
   header{
