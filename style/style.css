@@ -14,6 +14,7 @@ header{
   margin-bottom:16px;
   padding:16px;
   background:#aaa;
+  background-image:url(../images/light_toast.png);
 }
 header h1,
 header h2{
