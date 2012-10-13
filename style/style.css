@@ -13,11 +13,12 @@ body{
 header{
   margin-bottom:16px;
   padding:16px;
-  background:#ccc;
+  background:#aaa;
 }
 header h1,
 header h2{
   margin-bottom: 10px;
+  text-shadow:1px 1px 1px #ccc;
 }
 
 header input{
@@ -26,6 +27,16 @@ header input{
   border-radius: 3px;
   border: none;
   width: 400px;
+  box-shadow:1px 1px 1px #333;
+  outline:none;
+  -webkit-transition:color, background-color 0.5s ease-in;  
+  -moz-transition:color, background-color 0.5s ease-in;
+  -o-transition:color, background-color 0.5s ease-in;
+  transition:color, background-color 0.5s ease-in;
+}
+header input:focus{
+  background-color:orange;
+  color:black;
 }
 
 article{
@@ -50,6 +61,14 @@ article ul li a{
   font-size:16px;
   vertical-align: top;
   margin: 0 -8px 16px 16px;
+  text-shadow:1px 1px 1px #111;
+  -webkit-transition:background-color 0.5s ease-in;  
+  -moz-transition:background-color 0.5s ease-in;
+  -o-transition:background-color 0.5s ease-in;
+  transition:background-color 0.5s ease-in;
+}
+article ul li a:hover{
+  background-color:orange;
 }
 footer{
   padding: 14px;
@@ -61,3 +80,25 @@ footer a{
   text-decoration:none;
   font-weight:bold;
 }
+@media all and (max-width: 500px){
+  header{
+    margin:0;
+  }
+  header input{
+    display:block;
+    width:auto;
+  }
+  article{}
+  article ul li{
+    list-style:none;
+    display:block;
+  }
+  article ul li a{
+    padding:16px;
+    display:block;
+    min-height:0;
+    width:auto;
+    margin: 0 0 4px 0;
+  }
+}
+
