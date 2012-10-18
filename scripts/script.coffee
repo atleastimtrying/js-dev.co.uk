@@ -1,0 +1,3 @@
+
+$ ->
+  searchBox = new SearchBox '#search'

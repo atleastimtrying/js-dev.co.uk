@@ -1,0 +1,105 @@
+*{
+  margin:0;
+  padding:0;
+}
+html{
+  height:100%;
+  background:#333;
+  font-family:courier, monotype;
+}
+body{
+  background:#fff;
+}
+header{
+  margin-bottom:16px;
+  padding:16px;
+  background:#aaa;
+  background-image:url(../images/light_toast.png);
+}
+header h1,
+header h2{
+  margin-bottom: 10px;
+  text-shadow:1px 1px 1px #ccc;
+}
+
+header input{
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 3px;
+  border: none;
+  width: 400px;
+  box-shadow:1px 1px 1px #333;
+  outline:none;
+  -webkit-transition:color, background-color 0.5s ease-in;  
+  -moz-transition:color, background-color 0.5s ease-in;
+  -o-transition:color, background-color 0.5s ease-in;
+  transition:color, background-color 0.5s ease-in;
+}
+header input:focus{
+  background-color:orange;
+  color:black;
+}
+
+article{
+  margin-bottom: 16px;
+  padding:16px;
+  min-width:220px;
+  margin: 0 auto;
+}
+article ul{}
+article ul li{
+  list-style:none;
+  display:inline-block;
+}
+article ul li a{
+  padding:16px;
+  display:inline-block;
+  text-decoration:none;
+  background:#666;
+  color:#fff;
+  width:180px;
+  min-height:72px;
+  font-size:16px;
+  vertical-align: top;
+  margin: 0 -8px 16px 16px;
+  text-shadow:1px 1px 1px #111;
+  -webkit-transition:background-color 0.5s ease-in;  
+  -moz-transition:background-color 0.5s ease-in;
+  -o-transition:background-color 0.5s ease-in;
+  transition:background-color 0.5s ease-in;
+}
+article ul li a:hover{
+  background-color:orange;
+}
+footer{
+  padding: 14px;
+  background:#333;
+  color:#fff;
+}
+footer a{
+  color:inherit;
+  text-decoration:none;
+  font-weight:bold;
+}
+@media all and (max-width: 500px){
+  header{
+    margin:0;
+  }
+  header input{
+    display:block;
+    width:auto;
+  }
+  article{}
+  article ul li{
+    list-style:none;
+    display:block;
+  }
+  article ul li a{
+    padding:16px;
+    display:block;
+    min-height:0;
+    width:auto;
+    margin: 0 0 4px 0;
+  }
+}
+
