@@ -1,27 +1,20 @@
 class window.SearchBox
-  constructor: (input)->
-    @extendJqueryContains()
-    @input =  $ input
+  constructor: (@app)->
+    @input =  $ '#search'
     @allLinks = $ '.links li a'
-    @updateSearchString()
-    @input.keyup @displayLinks
+    @input.keyup @updateSearchString
+    $(@app).bind 'searchfor', @displayLinks
   
   linksContaining: (searchString)->
     $ ".links li a:containsNC('#{searchString}'), .links li a.#{searchString}"
   
-  updateSearchString: ->
+  updateSearchString: =>
     @searchString = @input.val()
+    $(@app).trigger 'searchfor', term: @searchString
 
-  displayLinks: =>
-    @updateSearchString()
-    if @searchString is ''
-      @allLinks.show()
+  displayLinks: (event, message)=>
+    if message.term is ''
+      @allLinks.parent().removeClass 'hidden'
     else
-      @allLinks.hide()
-      @linksContaining(@searchString).show()
-  
-  extendJqueryContains: ->
-    $.extend $.expr[":"], 
-      "containsNC": (elem, i, match, array)->
-        (elem.textContent or elem.innerText or "").toLowerCase().indexOf((match[3] or "").toLowerCase()) >= 0
-      
+      @allLinks.parent().addClass 'hidden'
+      @linksContaining(message.term).parent().removeClass 'hidden'

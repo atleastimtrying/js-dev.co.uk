@@ -1,7 +1,8 @@
 class window.HashReader
-  constructor: ->
-    @window = $ window
-    @window.bind 'hashchange', @updateLocation
+  constructor: (@app)->
+    @updateLocation()
+    $(window).bind 'hashchange', @updateLocation
   
-  updateLocation: ->
-    @location = window.location.hash.substring(1);
+  updateLocation: =>
+    @location = window.location.hash.substring 1
+    $(@app).trigger 'searchfor', term: @location
