@@ -1,4 +1,4 @@
-//window.onload = function(){
+(function (){
   var words = document.body.innerText.toLowerCase().split(/\W+/);
   var obj = {};
   var output = [];
@@ -23,21 +23,28 @@
       });
     } 
   });
+
   var newRow = function(index,word){
-    return "<tr><td>" + index + "</td><td>" + word + "</td></tr>\n";
+    return "<tr><td>" + (index + 1) + "</td><td>" + word + "</td></tr>\n";
   };
   var newTable = function(arr){
-    tableString = "<div class='afwordcount'><table><tr><th>Rank</th><th>Word</th></tr>";
+    tableString = "<div class='afwordcount'><a href='#' class='afclose'>x</a><table><tr><th>Rank</th><th>Word</th></tr>";
     for(var i = 0, l = arr.length; i < l; ++i){
       tableString += newRow(i, arr[i]);
     }
     tableString += "</table></div>";
     return tableString;
   };
+  var closeWindow = function(event){
+    document.getElementsByClassName('afwordcount')[0].style.display = 'none';
+  };
+  
   a = document.createElement('link');
   a.setAttribute('href', 'http://js-dev.co.uk/wordcount/wordcount.css');
   a.setAttribute('rel', 'stylesheet');
   h = document.getElementsByTagName('head')[0];
   h.appendChild(a);
+  
   document.body.innerHTML += newTable(sorted);
-//};
+  document.getElementsByClassName('afclose')[0].onclick = closeWindow;
+})();

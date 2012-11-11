@@ -8,21 +8,21 @@
       font-family:sans-serif;
     }
     a{
-      display:inline-block;
-      padding:5px 7px;
-      font-size:24px;
-      font-family:sans-serif;
-      color:#333;
-      text-shadow:1px 1px 1px black;
-      border-radius:4px;
-      background:#ccc;
-      box-shadow:3px 3px 3px #222;
-      text-decoration:none;
+      display: inline-block;
+      padding: 5px 28px;
+      font-size: 60px;
+      font-family: sans-serif;
+      color: #333;
+      text-shadow: 1px 1px 1px #999;
+      border-radius: 4px;
+      background: #A3C0CE;
+      box-shadow: 3px 3px 3px #222;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
   <p>Just drag the link below to your bookmarks bar.</p>
-  <a href="javascript:(function(){ a = document.createElement('script'), a.setAttribute('src', 'http://js-dev.co.uk/wordcount/wordcount.js'), h = document.getElementsByTagName('head')[0], h.appendChild(a); }());">wordcount</a>
+  <a href="javascript:(function(){ var prev = document.getElementsByClassName('afwordcount'); if(prev.length === 0){var a = document.createElement('script'); a.setAttribute('src', 'http://js-dev.co.uk/wordcount/wordcount.js'); var h = document.getElementsByTagName('head')[0]; h.appendChild(a);}else{prev[0].style.display = 'block';} }());">wordcount</a>
 </body>
 </html>
