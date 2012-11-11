@@ -34,6 +34,10 @@
     tableString += "</table></div>";
     return tableString;
   };
-  document.head.innerHTML += "<style>.afwordcount{ opacity:0.3; -webkit-transition:all 0.5s; box-shadow: 3px 3px 6px #ccc; font-family:sans;background:white; border: 1px solid #999; border-radius:4px; padding:19px;position:fixed; top: 50%; left: 50%; width:300px; height:400px; overflow-y:scroll; margin:-220px -170px; z-index:1000;} .afwordcount td{text-align:center; padding:12px 10px; border: 1px solid #eee;} .afwordcount:hover{opacity:1;}</style>"
+  a = document.createElement('link');
+  a.setAttribute('href', 'http://js-dev.co.uk/wordcount/wordcount.css');
+  a.setAttribute('rel', 'stylesheet');
+  h = document.getElementsByTagName('head')[0];
+  h.appendChild(a); }());
   document.body.innerHTML += newTable(sorted);
 //};
