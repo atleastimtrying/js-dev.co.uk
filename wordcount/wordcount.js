@@ -38,6 +38,6 @@
   a.setAttribute('href', 'http://js-dev.co.uk/wordcount/wordcount.css');
   a.setAttribute('rel', 'stylesheet');
   h = document.getElementsByTagName('head')[0];
-  h.appendChild(a); }());
+  h.appendChild(a);
   document.body.innerHTML += newTable(sorted);
 //};
