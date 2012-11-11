@@ -1,5 +1,5 @@
 //window.onload = function(){
-  var words = document.body.innerText.toLowerCase().split(' ');
+  var words = document.body.innerText.toLowerCase().split(/\W+/);
   var obj = {};
   var output = [];
   var sorted = [];
