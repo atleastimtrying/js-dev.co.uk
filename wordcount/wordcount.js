@@ -36,6 +36,7 @@
     return tableString;
   };
   var closeWindow = function(event){
+    event.preventDefault();
     document.getElementsByClassName('afwordcount')[0].style.display = 'none';
   };
   
