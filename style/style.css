@@ -61,7 +61,9 @@ article{
   min-width:220px;
   margin: 0 auto;
 }
-article ul{}
+article ul{
+  text-align:center;
+}
 article ul li{
   list-style:none;
   display:inline-block;
