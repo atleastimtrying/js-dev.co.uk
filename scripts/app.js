@@ -6,6 +6,7 @@
     function App() {
       this.searchBox = new SearchBox(this);
       this.hashReader = new HashReader(this);
+      this.preferenceManager = new PreferenceManager(this);
     }
 
     return App;
