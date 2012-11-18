@@ -64,7 +64,47 @@ header nav a:hover{
   background:#333;
   color:white;
 }
-
+header nav a.active{
+  background:white;
+  color:orange;
+}
+header .config{
+  position:absolute;
+  top: 10px;
+  right: 10px;
+  overflow:hidden;
+  width: 70px;
+  height: 18px;
+  padding: 5px;
+  background:#333;
+  display:none;
+  border-radius:4px;
+}
+header .config a{
+  display:none;
+  text-align:center;
+  background-color:rgba(255,255,255,0.5);
+  text-decoration:none;
+  padding:10px;
+  margin:10px;
+  color:#333;
+  border-radius:4px;
+}
+header .config span{
+  display:block;
+  color:white;
+}
+header .config:hover{
+  width:auto;
+  height:auto;
+}
+header .config:hover a{
+  display:block;
+  min-width:80px;
+}
+header .config:hover span{
+  display:none;
+}
 article{
   margin-bottom: 16px;
   padding:16px;
@@ -77,6 +117,11 @@ article ul{
 article ul li{
   list-style:none;
   display:inline-block;
+  margin: 0 -8px 16px 16px;
+  position:relative;
+}
+article ul li.read{
+  display:none;
 }
 article ul li a{
   padding:16px;
@@ -87,8 +132,8 @@ article ul li a{
   width:180px;
   min-height:72px;
   font-size:16px;
+  border-radius:4px;
   vertical-align: top;
-  margin: 0 -8px 16px 16px;
   text-shadow:1px 1px 1px #111;
   -webkit-transition:background-color 0.5s ease-in;  
   -moz-transition:background-color 0.5s ease-in;
@@ -99,7 +144,39 @@ article ul li a{
 article ul li a:hover{
   background-color:orange;
 }
+article ul li a.read,
+article ul li a.favourite{
+  position:absolute;
+  top:0;
+  right:0;
+  width:auto;
+  height:auto;
+  display:none;
+  padding:10px;
+  min-height:0;
+  color:white;
+}
+article ul li a.read{
+  background:rgba(255,0,0,0.4);
+}
+article ul li a.read.active{
+  background:rgba(0,255,0,0.4);
 
+}
+article ul li a.read:hover{
+
+}
+article ul li a.favourite{
+  right:auto;
+  left:0;
+  opacity:0;
+}
+article ul li a.favourite:hover,
+article ul li a.favourite.active{
+  background:transparent;
+  color:white;
+  opacity:1;
+}
 footer{
   padding: 14px;
   background:#333;

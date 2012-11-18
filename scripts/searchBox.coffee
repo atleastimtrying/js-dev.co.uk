@@ -4,7 +4,7 @@ class window.SearchBox
     @allLinks = $ '.links li a'
     @input.keyup @updateSearchString
     $(@app).bind 'searchfor', @displayLinks
-  
+
   linksContaining: (searchString)->
     $ ".links li a:containsNC('#{searchString}'), .links li a.#{searchString}"
   
