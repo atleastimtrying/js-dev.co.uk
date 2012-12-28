@@ -1,4 +1,4 @@
-.afwordcount{
+div#afwordcount{
   box-shadow: 0 0 20px #333;
   font-family:sans-serif;
   background:white;
@@ -9,8 +9,10 @@
   top: 50px;
   right: 50px;
   z-index:1000;
+  width:auto;
+  height:auto;
 } 
-.afwordcount ul{
+div#afwordcount ul{
   display: inline-block;
   overflow-y:scroll;
   max-height:400px;
@@ -19,27 +21,31 @@
   vertical-align: top;
   margin:0;
 }
-.afwordcount li{
+div#afwordcount ul li{
   list-style:none;
   background:white;
   padding:5px;
 }
-.afwordcount li:nth-child(even){
+div#afwordcount ul li:nth-child(even){
   background:#eee;
 }
-.afwordcount li span{
+div#afwordcount ul li span{
   font-weight:bold;
 }
-.afwordcount .wordcount-right{
+div#afwordcount div.wordcount-right{
   display: inline-block;
   vertical-align: top;
   padding: 5px;
   margin:0;
+  background:transparent;
+  width:auto;
+  height:auto;
+  color:#333;
 }
-.afwordcount .wordcount-right span{
+div#afwordcount div.wordcount-right span{
   font-weight:bold;
 }
-a.afclose{
+div#afwordcount a.afclose{
   position:absolute;
   top:0;
   right:0;

@@ -29,7 +29,7 @@
   };
   
   var newWindow = function(){
-    return "<div class='afwordcount' draggable='true'><a href='#' class='afclose'>x</a>" + newList(sorted) + newBox();
+    return "<div id='afwordcount' draggable='true'><a href='#' class='afclose'>x</a>" + newList(sorted) + newBox();
   };
 
   var newList = function(arr){
