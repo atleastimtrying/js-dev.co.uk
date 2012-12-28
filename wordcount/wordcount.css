@@ -8,6 +8,8 @@ div#afwordcount{
   position:fixed;
   top: 50px;
   right: 50px;
+  left:auto;
+  bottom:auto;
   z-index:1000;
   width:auto;
   height:auto;
@@ -42,9 +44,17 @@ div#afwordcount div.wordcount-right{
   height:auto;
   color:#333;
 }
+
+div#afwordcount div.wordcount-right p{
+  font-weight:normal;
+  font-size:16px;
+  font-family:sans-serif;
+}
+
 div#afwordcount div.wordcount-right span{
   font-weight:bold;
 }
+
 div#afwordcount a.afclose{
   position:absolute;
   top:0;
