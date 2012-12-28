@@ -1,5 +1,5 @@
 .afwordcount{
-  box-shadow: 3px 3px 6px #ccc;
+  box-shadow: 0 0 20px #333;
   font-family:sans-serif;
   background:white;
   border: 1px solid #333;
@@ -52,11 +52,9 @@ a.afclose{
   font-family:sans-serif;
   background:#333;
   color:white;
-  border-radius:12px;
-  border: 2px solid white;
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 14px;
   margin:0;
-  box-shadow: 3px 3px 6px #ccc;
+  border-radius:0;
+  box-shadow:none;
 }
   
