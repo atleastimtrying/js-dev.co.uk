@@ -51,7 +51,7 @@
 
   var closeWindow = function(event){
     event.preventDefault();
-    document.getElementsByClassName('afwordcount')[0].style.display = 'none';
+    document.getElementById('afwordcount')[0].style.display = 'none';
   };
   
   a = document.createElement('link');
