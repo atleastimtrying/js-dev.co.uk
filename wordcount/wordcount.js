@@ -31,7 +31,7 @@
     return "<div class='afwordcount'><a href='#' class='afclose'>x</a>" + newTable(sorted) + newBox();
   }
   var newList = function(arr){
-    var listString += "<ul><li><span>Rank</span>Word</li>";
+    var listString = "<ul><li><span>Rank</span>Word</li>";
     for(var i = 0, l = arr.length; i < l; ++i){
       listString += newLi(i, arr[i]);
     }
