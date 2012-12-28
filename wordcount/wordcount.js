@@ -28,11 +28,15 @@
     return "<tr><td>" + (index + 1) + "</td><td>" + word + "</td></tr>\n";
   };
   var newTable = function(arr){
-    tableString = "<div class='afwordcount'><a href='#' class='afclose'>x</a><table><tr><th>Rank</th><th>Word</th></tr>";
+    tableString = "<div class='afwordcount'><a href='#' class='afclose'>x</a>";
+    tableString += "<table><tr><th>Rank</th><th>Word</th></tr>";
     for(var i = 0, l = arr.length; i < l; ++i){
       tableString += newRow(i, arr[i]);
     }
-    tableString += "</table></div>";
+    tableString += "</table><div class='wordcount-right'>";
+    tableString += "<p>titles: <span id='wordcount-titles'>0</span></p>";
+    tableString += "<p>H1s: <span id='wordcount-h1'>0</span></p>";
+    tableString += "</div></div>";
     return tableString;
   };
   var closeWindow = function(event){
@@ -48,4 +52,5 @@
   
   document.body.innerHTML += newTable(sorted);
   document.getElementsByClassName('afclose')[0].onclick = closeWindow;
+
 })();

@@ -10,14 +10,22 @@
   left: 50%; 
   width:300px;
   height:400px; 
-  overflow-y:scroll;
   margin:-220px -170px;
   z-index:1000;
+  resize:both;
 } 
+.afwordcount table{
+  overflow-y:scroll;
+}
+.afwordcount tr{
+  background:white;
+}
+.afwordcount tr:nth-child(even){
+  background:gray;
+}
 .afwordcount td{
   text-align:center; 
-  padding:12px 10px; 
-  border: 1px solid #eee;
+  padding:12px 10px;
 }
 a.afclose{
   position:fixed;
