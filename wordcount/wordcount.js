@@ -25,7 +25,7 @@
   });
 
   var newLi = function(index,word){
-    return "<li><span>" + (index + 1) + "</span>" + word + "</li>\n";
+    return "<li><span>" + (index + 1) + "</span> : " + word + "</li>\n";
   };
   
   var newWindow = function(){
@@ -33,7 +33,7 @@
   };
 
   var newList = function(arr){
-    var listString = "<ul><li><span>Rank</span>Word</li>";
+    var listString = "<ul><li><span>Rank</span> : Word</li>";
     for(var i = 0, l = arr.length; i < l; ++i){
       listString += newLi(i, arr[i]);
     }
