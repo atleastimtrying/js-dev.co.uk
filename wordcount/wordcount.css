@@ -14,21 +14,23 @@
   z-index:1000;
   resize:both;
 } 
-.afwordcount table{
+.afwordcount ul{
   display: inline-block;
   overflow-y:scroll;
   height:400px;
+  border-radius:3px;
   border: 1px solid #333;
 }
-.afwordcount tr{
+.afwordcount li{
+  list-style:none;
   background:white;
+  padding:5px;
 }
-.afwordcount tr:nth-child(even){
-  background:gray;
+.afwordcount li:nth-child(even){
+  background:#eee;
 }
-.afwordcount td{
-  text-align:center; 
-  padding:12px 10px;
+.afwordcount li span{
+  font-weight:bold;
 }
 .afwordcount .wordcount-right{
   display: inline-block;
