@@ -24,21 +24,29 @@
     } 
   });
 
-  var newRow = function(index,word){
-    return "<tr><td>" + (index + 1) + "</td><td>" + word + "</td></tr>\n";
+  var newLi = function(index,word){
+    return "<li><span>" + (index + 1) + "</span>" + word + "</li>\n";
   };
-  var newTable = function(arr){
-    tableString = "<div class='afwordcount'><a href='#' class='afclose'>x</a>";
-    tableString += "<table><tr><th>Rank</th><th>Word</th></tr>";
+  var newWindow = function(){
+    return "<div class='afwordcount'><a href='#' class='afclose'>x</a>" + newTable(sorted) + newBox();
+  }
+  var newList = function(arr){
+    var listString += "<ul><li><span>Rank</span>Word</li>";
     for(var i = 0, l = arr.length; i < l; ++i){
-      tableString += newRow(i, arr[i]);
+      listString += newLi(i, arr[i]);
     }
-    tableString += "</table><div class='wordcount-right'>";
-    tableString += "<p>titles: <span id='wordcount-titles'>" + document.getElementsByTagName('title').length + "</span></p>";
-    tableString += "<p>H1s: <span id='wordcount-h1'>" + document.getElementsByTagName('h1').length + "</span></p>";
-    tableString += "</div></div>";
-    return tableString;
+    listString += "</ul>";
+    return listString;
   };
+  
+  var newBox = function(){
+    var boxString = "<div class='wordcount-right'>";
+    boxString += "<p>titles: <span id='wordcount-titles'>" + document.getElementsByTagName('title').length + "</span></p>";
+    boxString += "<p>H1s: <span id='wordcount-h1'>" + document.getElementsByTagName('h1').length + "</span></p>";
+    boxString += "</div></div>";
+    return boxString;
+  };
+
   var closeWindow = function(event){
     event.preventDefault();
     document.getElementsByClassName('afwordcount')[0].style.display = 'none';
@@ -50,7 +58,7 @@
   h = document.getElementsByTagName('head')[0];
   h.appendChild(a);
   
-  document.body.innerHTML += newTable(sorted);
+  document.body.innerHTML += newWindow();
   document.getElementsByClassName('afclose')[0].onclick = closeWindow;
 
 })();

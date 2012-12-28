@@ -15,6 +15,7 @@
   resize:both;
 } 
 .afwordcount table{
+  display: inline-block;
   overflow-y:scroll;
   height:400px;
   border: 1px solid #333;
