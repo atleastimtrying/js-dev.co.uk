@@ -2,24 +2,22 @@
   box-shadow: 3px 3px 6px #ccc;
   font-family:sans-serif;
   background:white;
-  border: 1px solid #999;
+  border: 1px solid #333;
   border-radius:4px;
   padding:19px;
   position:fixed;
-  top: 50%;
-  left: 50%; 
-  width:300px;
-  height:400px; 
-  margin:-220px -170px;
+  top: 50px;
+  left: 50px;
   z-index:1000;
-  resize:both;
 } 
 .afwordcount ul{
   display: inline-block;
   overflow-y:scroll;
-  height:400px;
+  max-height:400px;
+  padding:5px;
   border-radius:3px;
-  border: 1px solid #333;
+  vertical-align: top;
+  margin:0;
 }
 .afwordcount li{
   list-style:none;
@@ -35,15 +33,16 @@
 .afwordcount .wordcount-right{
   display: inline-block;
   vertical-align: top;
-  padding: 20px;
+  padding: 5px;
+  margin:0;
 }
 .afwordcount .wordcount-right span{
   font-weight:bold;
 }
 a.afclose{
-  position:fixed;
-  top:50%;
-  left:50%;
+  position:absolute;
+  top:0;
+  right:0;
   z-index:1001;
   display:block;
   padding:10px 0;
@@ -57,7 +56,7 @@ a.afclose{
   border: 2px solid white;
   font-size: 16px;
   font-weight: bold;
-  margin:-233px 0 0 157px;
+  margin:0;
   box-shadow: 3px 3px 6px #ccc;
 }
   
