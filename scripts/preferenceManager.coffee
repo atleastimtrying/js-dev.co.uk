@@ -9,7 +9,6 @@ class window.PreferenceManager
   showThem: =>
     if @showing
       $('.links li a.' + @keyword).hide()
-      $('.links li.' + @keyword).hide() if @keyword is 'read'
       @showing = no
     else
       $('.links li a.' + @keyword).css('display', 'inline-block')
