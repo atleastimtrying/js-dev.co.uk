@@ -27,9 +27,11 @@
   var newLi = function(index,word){
     return "<li><span>" + (index + 1) + "</span>" + word + "</li>\n";
   };
+  
   var newWindow = function(){
-    return "<div class='afwordcount'><a href='#' class='afclose'>x</a>" + newTable(sorted) + newBox();
-  }
+    return "<div class='afwordcount'><a href='#' class='afclose'>x</a>" + newList(sorted) + newBox();
+  };
+
   var newList = function(arr){
     var listString = "<ul><li><span>Rank</span>Word</li>";
     for(var i = 0, l = arr.length; i < l; ++i){
