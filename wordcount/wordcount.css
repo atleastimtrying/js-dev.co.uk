@@ -16,6 +16,8 @@
 } 
 .afwordcount table{
   overflow-y:scroll;
+  height:400px;
+  border: 1px solid #333;
 }
 .afwordcount tr{
   background:white;
@@ -26,6 +28,14 @@
 .afwordcount td{
   text-align:center; 
   padding:12px 10px;
+}
+.afwordcount .wordcount-right{
+  display: inline-block;
+  vertical-align: top;
+  padding: 20px;
+}
+.afwordcount .wordcount-right span{
+  font-weight:bold;
 }
 a.afclose{
   position:fixed;

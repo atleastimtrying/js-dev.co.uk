@@ -34,8 +34,8 @@
       tableString += newRow(i, arr[i]);
     }
     tableString += "</table><div class='wordcount-right'>";
-    tableString += "<p>titles: <span id='wordcount-titles'>0</span></p>";
-    tableString += "<p>H1s: <span id='wordcount-h1'>0</span></p>";
+    tableString += "<p>titles: <span id='wordcount-titles'>" + document.getElementsByTagName('title').length + "</span></p>";
+    tableString += "<p>H1s: <span id='wordcount-h1'>" + document.getElementsByTagName('h1').length + "</span></p>";
     tableString += "</div></div>";
     return tableString;
   };
