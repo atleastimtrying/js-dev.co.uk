@@ -7,7 +7,7 @@
   padding:19px;
   position:fixed;
   top: 50px;
-  left: 50px;
+  right: 50px;
   z-index:1000;
 } 
 .afwordcount ul{
