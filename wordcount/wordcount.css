@@ -6,8 +6,8 @@ div#afwordcount{
   border-radius:4px;
   padding:19px;
   position:fixed;
-  top: 50px;
-  right: 50px;
+  top: 20px;
+  right: 20px;
   left:auto;
   bottom:auto;
   z-index:1000;
