@@ -14,6 +14,7 @@ div#afwordcount{
   width:auto;
   height:auto;
 } 
+
 div#afwordcount ul{
   display: inline-block;
   overflow-y:scroll;
@@ -23,17 +24,21 @@ div#afwordcount ul{
   vertical-align: top;
   margin:0;
 }
+
 div#afwordcount ul li{
   list-style:none;
   background:white;
   padding:5px;
 }
+
 div#afwordcount ul li:nth-child(even){
   background:#eee;
 }
+
 div#afwordcount ul li span{
   font-weight:bold;
 }
+
 div#afwordcount div.wordcount-right{
   display: inline-block;
   vertical-align: top;
@@ -89,6 +94,7 @@ a#wordcount-question-submit{
   color:#333;
   margin-bottom:8px;
 }
+
 a#wordcount-question-submit{
   background:#666;
   color:white;
@@ -97,4 +103,10 @@ a#wordcount-question-submit{
   box-shadow:none;
   text-shadow:none;
   text-decoration:none;
+}
+
+div.wordcount-question-container img{
+  background-color:green;
+  width:20px;
+  height:20px;
 }

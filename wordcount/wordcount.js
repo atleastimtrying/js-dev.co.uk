@@ -71,9 +71,10 @@
   var submitQuestion = function(event){
     var question = document.getElementById('wordcount-question');
     var email = document.getElementById('wordcount-email');
-    console.log(question.value, email.value);
+    var img = document.createElement('img');
+    img.src = 'http://imgtoparams.herokuapp.com/img.png?question=' + question + '&message=' + message ;
+    document.getElementsByClassName('wordcount-question-container').appendChild(img);
     question.value = '';
-    alert('thanks for your question! We will email to ' + email.value + ' shortly');
     return false;
   };
 
