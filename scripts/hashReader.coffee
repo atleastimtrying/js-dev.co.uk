@@ -6,4 +6,3 @@ class window.HashReader
   updateLocation: =>
     @location = window.location.hash.substring 1
     $(@app).trigger 'searchfor', term: @location
-    

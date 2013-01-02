@@ -41,10 +41,25 @@
     return listString;
   };
   
+  var getMeta =function(){
+    var metas = document.getElementsByTagName('meta');
+    var string = '<ul>';
+    for(var i = 0, l = metas.length; i < l; ++i){
+      if(metas[i].getAttribute('name')){
+        string += '<li>' + metas[i].getAttribute("name") + ' : ' + metas[i].getAttribute("content") + '</li>' 
+      }
+    }
+    string += '</ul>';
+    return string;
+  };
+
   var newBox = function(){
     var boxString = "<div class='wordcount-right'>";
-    boxString += "<p>titles: <span id='wordcount-titles'>" + document.getElementsByTagName('title').length + "</span></p>";
+    boxString += "<p>title: <span id='wordcount-title'>" + document.getElementsByTagName('title').innerHTML + "</span></p>";
+    boxString += "<p>desc: <span id='wordcount-desc'>" + document.getElementsByTagName('title').innerHTML + "</span></p>";
     boxString += "<p>H1s: <span id='wordcount-h1'>" + document.getElementsByTagName('h1').length + "</span></p>";
+    boxString += getMeta();
+    boxString += "<div class='wordcount-question-container'><input type='email' id='wordcount-email' placeholder='Email'><input type='text' id='wordcount-question' placeholder='Ask us a Question'><a href='#' id='wordcount-question-submit'>Go!</a></div>";
     boxString += "</div></div>";
     return boxString;
   };
@@ -53,14 +68,24 @@
     event.preventDefault();
     document.getElementById('afwordcount').style.display = 'none';
   };
-  
+  var submitQuestion = function(event){
+    var question = document.getElementById('wordcount-question');
+    var email = document.getElementById('wordcount-email');
+    console.log(question.value, email.value);
+    question.value = '';
+    alert('thanks for your question! We will email to ' + email.value + ' shortly');
+    return false;
+  };
+
   a = document.createElement('link');
-  a.setAttribute('href', 'http://js-dev.co.uk/wordcount/wordcount.css');
+  //a.setAttribute('href', 'http://js-dev.co.uk/wordcount/wordcount.css');
+  a.setAttribute('href', 'wordcount.css');
   a.setAttribute('rel', 'stylesheet');
   h = document.getElementsByTagName('head')[0];
   h.appendChild(a);
   
   document.body.innerHTML += newWindow();
   document.getElementsByClassName('afclose')[0].onclick = closeWindow;
+  document.getElementById('wordcount-question-submit').onclick = submitQuestion;
 
 })();

@@ -76,4 +76,25 @@ div#afwordcount a.afclose{
   box-shadow:none;
   border:none;
 }
-  
+
+div.wordcount-question-container input,
+a#wordcount-question-submit{
+  width:200px;
+  padding:8px;
+  border:none;
+  background:#eee;
+  border-radius: 4px;
+  display:block;
+  font-size:16px;
+  color:#333;
+  margin-bottom:8px;
+}
+a#wordcount-question-submit{
+  background:#666;
+  color:white;
+  display:inline-block;
+  width:auto;
+  box-shadow:none;
+  text-shadow:none;
+  text-decoration:none;
+}

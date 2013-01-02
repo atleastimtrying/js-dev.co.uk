@@ -1,7 +1,6 @@
 describe "hashReader", ->
   it "exists", ->
     expect(window.app.hashReader).toBeDefined()
-
   it "shows on link click", ->
     $('nav a:nth-child(2)').trigger 'click'  
     expect($('.links li:nth-child(1)').hasClass('hidden')).toEqual false

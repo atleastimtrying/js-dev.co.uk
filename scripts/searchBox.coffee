@@ -18,4 +18,3 @@ class window.SearchBox
     else
       @allLinks.parent().addClass 'hidden'
       @linksContaining(message.term).parent().removeClass 'hidden'
-      
