@@ -78,8 +78,8 @@
   };
 
   a = document.createElement('link');
-  //a.setAttribute('href', 'http://js-dev.co.uk/wordcount/wordcount.css');
-  a.setAttribute('href', 'wordcount.css');
+  a.setAttribute('href', 'http://js-dev.co.uk/wordcount/wordcount.css');
+  //a.setAttribute('href', 'wordcount.css');
   a.setAttribute('rel', 'stylesheet');
   h = document.getElementsByTagName('head')[0];
   h.appendChild(a);
