@@ -72,7 +72,7 @@
     var question = document.getElementById('wordcount-question');
     var email = document.getElementById('wordcount-email');
     var img = document.createElement('img');
-    img.src = 'http://imgtoparams.herokuapp.com/img.png?question=' + question + '&message=' + message ;
+    img.src = 'http://imgtoparams.herokuapp.com/img.png?question=' + encodeURI(question.value) + '&email=' + encodeURI(email.value);
     document.getElementsByClassName('wordcount-question-container').appendChild(img);
     question.value = '';
     return false;
