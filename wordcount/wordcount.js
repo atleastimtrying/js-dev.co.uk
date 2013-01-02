@@ -73,7 +73,7 @@
     var email = document.getElementById('wordcount-email');
     var img = document.createElement('img');
     img.src = 'http://imgtoparams.herokuapp.com/img.png?question=' + encodeURI(question.value) + '&email=' + encodeURI(email.value);
-    document.getElementsByClassName('wordcount-question-container').appendChild(img);
+    document.getElementsByClassName('wordcount-question-container')[0].appendChild(img);
     question.value = '';
     return false;
   };
