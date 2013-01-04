@@ -41,24 +41,56 @@
     return listString;
   };
   
-  var getMeta =function(){
+  var getData =function(){
+    var response = {};
+    if(document.getElementsByTagName('title')[0]){
+      response.title = document.getElementsByTagName('title').innerHTML;
+    }
+    if(document.getElementsByTagName('h1')[0]){
+      response.h1 = document.getElementsByTagName('h1')[0].innerHTML;
+    }
+    if(document.getElementsByTagName('h2')[0]){
+      response.h2 = document.getElementsByTagName('h2')[0].innerHTML;
+    }
     var metas = document.getElementsByTagName('meta');
-    var string = '<ul>';
-    for(var i = 0, l = metas.length; i < l; ++i){
-      if(metas[i].getAttribute('name')){
-        string += '<li>' + metas[i].getAttribute("name") + ' : ' + metas[i].getAttribute("content") + '</li>' 
+    var links = document.getElementsByTagName('link');
+    for(var i = 0, l = metas.length; i < l; i++){
+      if(metas[i].getAttribute('name') === 'description'){
+        response.description = metas[i].getAttribute('content');
+      }
+      if(metas[i].getAttribute('name') === 'robots'){
+        response.robots = metas[i].getAttribute('value');
       }
     }
-    string += '</ul>';
-    return string;
+    for(var i = 0, l = links.length; i < l; i++){
+      if(links[i].getAttribute('rel') === 'canonical'){
+        response.canonical = links[i].getAttribute('href');
+      }
+    }
+    return response;
   };
 
   var newBox = function(){
+    var data = getData();
     var boxString = "<div class='wordcount-right'>";
-    boxString += "<p>title: <span id='wordcount-title'>" + document.getElementsByTagName('title').innerHTML + "</span></p>";
-    boxString += "<p>desc: <span id='wordcount-desc'>" + document.getElementsByTagName('title').innerHTML + "</span></p>";
-    boxString += "<p>H1s: <span id='wordcount-h1'>" + document.getElementsByTagName('h1').length + "</span></p>";
-    boxString += getMeta();
+    if(data.title){
+      boxString += "<p>title: <span>" + data.title + "</span></p>";
+    }
+    if(data.description){
+      boxString += "<p>description: <span>" + data.description + "</span></p>";
+    }
+    if(data.canonical){
+      boxString += "<p>canonical: <span>" + data.canonical + "</span></p>";
+    }
+    if(data.robots){
+      boxString += "<p>robots: <span>" + data.robots + "</span></p>";
+    }
+    if(data.h1){
+      boxString += "<p>H1: <span>" + data.h1 + "</span></p>";
+    }
+    if(data.h2){
+      boxString += "<p>H2: <span>" + data.h2 + "</span></p>";
+    }
     boxString += "<div class='wordcount-question-container'><input type='email' id='wordcount-email' placeholder='Email'><input type='text' id='wordcount-question' placeholder='Ask us a Question'><a href='#' id='wordcount-question-submit'>Go!</a></div>";
     boxString += "</div></div>";
     return boxString;
@@ -80,7 +112,6 @@
 
   a = document.createElement('link');
   a.setAttribute('href', 'http://js-dev.co.uk/wordcount/wordcount.css');
-  //a.setAttribute('href', 'wordcount.css');
   a.setAttribute('rel', 'stylesheet');
   h = document.getElementsByTagName('head')[0];
   h.appendChild(a);

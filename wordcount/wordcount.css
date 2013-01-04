@@ -49,6 +49,7 @@ div#afwordcount div.wordcount-right{
   height:auto;
   color:#333;
   position:relative;
+  max-width:324px;
 }
 
 div#afwordcount div.wordcount-right p{
@@ -103,10 +104,4 @@ a#wordcount-question-submit{
   box-shadow:none;
   text-shadow:none;
   text-decoration:none;
-}
-
-div.wordcount-question-container img{
-  background-color:green;
-  width:20px;
-  height:20px;
 }
