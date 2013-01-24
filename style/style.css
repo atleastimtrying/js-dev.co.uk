@@ -116,7 +116,7 @@ article ul{
 article ul li{
   list-style:none;
   display:inline-block;
-  margin: 0 -8px 16px 16px;
+  margin: 0 0 16px 10px;
   position:relative;
 }
 article ul li.read{
@@ -203,6 +203,7 @@ footer a{
   article ul li{
     list-style:none;
     display:block;
+    margin-left:0;
   }
   article ul li a{
     padding:16px;
