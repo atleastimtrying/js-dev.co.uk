@@ -116,7 +116,7 @@ article ul{
 article ul li{
   list-style:none;
   display:inline-block;
-  margin: 0 0 16px 10px;
+  margin: 0 10px 16px 10px;
   position:relative;
 }
 article ul li.read{
