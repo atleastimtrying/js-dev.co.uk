@@ -204,6 +204,7 @@ footer a{
     list-style:none;
     display:block;
     margin-left:0;
+    width:100%;
   }
   article ul li a{
     padding:16px;
